@@ -40,6 +40,7 @@ $ npm start
 
 * [Node.js](https://nodejs.org/)
 * [React](https://reactjs.org/)
+* [Reactstrap](https://reactstrap.github.io/)
 * [Typescript](https://www.typescriptlang.org/)
 
 ## Licença
