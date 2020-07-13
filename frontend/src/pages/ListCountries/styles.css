@@ -1,0 +1,7 @@
+.open-map {
+  cursor: pointer;
+}
+
+.open-map:hover {
+  color: #0366d6;
+}
