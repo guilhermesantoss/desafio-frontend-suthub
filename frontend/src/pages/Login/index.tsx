@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Form, FormGroup, Button, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Button, Label, Input, Alert } from 'reactstrap';
 import api from '../../services/api';
 
 import './styles.css';
@@ -11,7 +11,11 @@ const Login: React.FC = () => {
     password: ''
   });
 
+  const [show, setShow] = useState(false);
+
   const history = useHistory();
+
+  const toggle = () => setShow(!show);
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
@@ -23,11 +27,18 @@ const Login: React.FC = () => {
       password
     }
 
-    const response = await api.post('/login', data);
- 
-    localStorage.setItem("token", response.data.token);
-    
-    history.push('/list-countries'); 
+    if (email.length !== 0 && password.length >= 6) {
+      setShow(false);
+
+      const response = await api.post('/login', data);
+
+      localStorage.setItem("token", response.data.token);
+      
+      history.push('/list-countries'); 
+    } else {
+      toggle();
+      return;
+    }
   }
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
@@ -37,9 +48,16 @@ const Login: React.FC = () => {
 
   return (
     <>
+      <Alert 
+        className="absolute" 
+        color="danger" 
+        isOpen={show} 
+        toggle={toggle}
+      >
+        Preencha os campos corretamente!
+      </Alert>
       <div className="container center">
         <h2>Login</h2>
-
         <Form className="form-container" onSubmit={handleSubmit}>
           <FormGroup>
             <Label>Email</Label>

@@ -3,3 +3,11 @@
   flex-direction: column;
   width: 300px;
 }
+
+.absolute {
+  position: absolute !important; 
+  top: 10px; 
+  right: 10px;
+  max-width: 500px;
+  min-width: 200px;
+}
