@@ -19,6 +19,13 @@ Agora vamos criar o Banco de Dados utilizando o comando:
 $ npm run knex:migrate
 ```
 
+Em seguida vamos criar um arquivo ".env" dentro da pasta "backend/" com duas constantes:
+```code
+APP_SECRET=CHAVE_SECRETA_ALEATORIA
+PORT=3333
+```
+Recomendado usar o site [md5](https://www.md5hashgenerator.com/) para gerar a chave secreta.
+
 Por fim, para deixar o servidor rodando, vamos executar o comando:
 ```bash
 $ npm run dev
