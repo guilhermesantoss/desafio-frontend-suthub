@@ -20,7 +20,7 @@ $ npm run knex:migrate
 ```
 
 Em seguida vamos criar um arquivo ".env" dentro da pasta "backend/" com duas constantes:
-```code
+```
 APP_SECRET=CHAVE_SECRETA_ALEATORIA
 PORT=3333
 ```
