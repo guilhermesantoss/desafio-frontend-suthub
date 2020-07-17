@@ -20,7 +20,7 @@ interface RestCountriesResponse {
   latlng: [
     number,
     number
-  ]
+  ];
 }
 
 const ListCountries: React.FC = () => {
