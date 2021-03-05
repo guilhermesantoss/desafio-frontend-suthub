@@ -1,3 +1,6 @@
 node_modules
 .env
 *.sqlite
+
+yarn.lock
+package-lock.json
