@@ -11,12 +11,12 @@
 
 Começando pelo back-end, entre na pasta "backend/" e instale todas as dependências do projeto utilizando o comando:
 ```bash
-$ npm install
+npm install
 ```
 
 Agora vamos criar o Banco de Dados utilizando o comando:
 ```bash
-$ npm run knex:migrate
+npm run knex:migrate
 ```
 
 Em seguida vamos criar um arquivo ".env" dentro da pasta "backend/" com duas constantes:
@@ -28,19 +28,19 @@ Recomendado usar o site [md5](https://www.md5hashgenerator.com/) para gerar a ch
 
 Por fim, para deixar o servidor rodando, vamos executar o comando:
 ```bash
-$ npm run dev
+npm run dev
 ```
 
 ## Executando o Front-end
 
 Com o nosso Back-end rodando, agora podemos iniciar o processo de instalação das dependências na pasta "frontend/" utilizando o comando:
 ```bash
-$ npm install
+npm install
 ```
 
 Agora que as dependências estão devidamente instaladas, vamos executar o Front-end utilizando o comando:
 ```bash
-$ npm start
+npm start
 ```
 
 ## Tecnologias utilizadas
